@@ -8,6 +8,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
+app.get('/', (req, res) => res.send('Server is running'));
+
 const PORT = process.env.PORT && process.env.PORT !== '8080' ? Number(process.env.PORT) : 3000;
 
 // ================= ১. বডি পার্সার ও স্ট্যাটিক ফাইল হ্যান্ডলার =================
