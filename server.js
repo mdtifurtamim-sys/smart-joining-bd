@@ -151,7 +151,7 @@ app.post('/api/upload', upload.single('image'), (req, res) => {
 async function startServer() {
   if (process.env.NODE_ENV === 'production') {
     // প্রোডাকশনে dist ফোল্ডারের ফাইল সার্ভ করবে
-    const distPath = path.resolve(__dirname, 'dist');
+    path.resolve(__dirname, '../dist')
     app.use(express.static(distPath));
     app.get('*', (_req, res) => {
       res.sendFile(path.resolve(distPath, 'index.html'));
