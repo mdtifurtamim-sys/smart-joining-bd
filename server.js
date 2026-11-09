@@ -27,7 +27,7 @@ const DATA_DIR = path.resolve(__dirname, 'data');
 });
 
 // স্ট্যাটিক ফাইল সার্ভিং
-app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.static(path.resolve(__dirname, 'dist')));
 app.use('/uploads', express.static(UPLOAD_DIR));
 
 // ================= ২. ফাইল আপলোড কনফিগারেশন (Multer) =================
